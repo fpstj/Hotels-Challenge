@@ -1,0 +1,52 @@
+To implement the hotel review application, we can follow these steps:
+
+1. Accounts:
+
+* Implement Sign up as regular user (email, display name, password):
+	* We can create a sign up form that allows users to enter their email, display name, and password.
+	  We can validate the form input to ensure that the email is in the correct format and the password
+	  meets certain criteria (e.g., minimum length). Once the form is submitted, we can send a POST request
+	  to the server with the user's information. The server can then create a new user in the database and
+	  return a success or error message to the client.
+
+* Implement Sign in using email and password:
+	* We can create a sign in form that allows users to enter their email and password. We can validate the
+	  form input to ensure that the email is in the correct format and the password meets certain criteria (e.g.,
+	  minimum length). Once the form is submitted, we can send a POST request to the server with the user's email
+	  and password. The server can then verify the credentials and return a success or error message to the client.
+
+2. Hotels:
+
+* View list of hotels ordered by name ascending:
+	* We can create an endpoint on the server that returns a list of hotels in the database, ordered by name ascending.
+	  We can send a GET request to this endpoint from the client to retrieve the list of hotels. To optimize the loading
+	  of the list, we can implement pagination, where the endpoint returns a certain number of hotels at a time and the
+	  client can request the next batch of hotels as needed.
+	
+* Add hotel with all details:
+	* We can create a form on the client that allows administrators to enter the details for a new hotel (name, address,
+	  image, description, geolocation). We can validate the form input to ensure that all required fields are filled out.
+	  Once the form is submitted, we can send a POST request to the server with the hotel's information. The server can
+	  then create a new hotel in the database and return a success or error message to the client.
+
+* View hotel details:
+	* We can create an endpoint on the server that returns the details for a specific hotel, given its ID. We can send a GET
+	  request to this endpoint from the client, passing in the ID of the hotel as a query parameter. The server can then
+	  return the hotel's details in the response.
+	  
+* Edit hotel details:
+	* We can create a form on the client that allows administrators to edit the details for an existing hotel (name, address,
+	  image, description, geolocation). We can validate the form input to ensure that all required fields are filled out.
+	  Once the form is submitted, we can send a PUT request to the server with the updated hotel information. The server can
+	  then update the hotel's details in the database and return a success or error message to the client.
+
+* Search for hotels based on their name and/or address (ie. city):
+	* We can create an endpoint on the server that allows the client to search for hotels by name and/or address. We can send
+	  a GET request to this endpoint, passing in the search terms as query parameters. The server can then search the database
+	  for hotels that match the search terms and return a list of matching hotels in the response.
+	  
+3. Favorites:
+
+* Add hotel to favorites:
+	* We can create an endpoint on the server that allows the client to add a hotel to a user's list of favorites. We can send a
+	  POST request to this endpoint, passing in the user's ID and the ID.
